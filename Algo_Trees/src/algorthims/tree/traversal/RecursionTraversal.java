@@ -14,9 +14,24 @@ public class RecursionTraversal {
 	public static void inOrderTraversal(MyTreeNode root){
 		if(root != null){
 			inOrderTraversal(root.getLeft());
-			System.out.println(" "+root.getData());
+			System.out.print(" "+root.getData());
 			inOrderTraversal(root.getRight());
 		}
+	}
+	
+	public static boolean inOrderTraversalFind(MyTreeNode root, Object x){
+		boolean check = false;
+		if(root != null){
+			check = inOrderTraversalFind(root.getLeft(), x);
+			if(root.getData() == x){
+				check = true;
+			}
+			if(!check){
+				check = inOrderTraversalFind(root.getRight(), x);
+			}
+			return check;
+		}
+		return false;
 	}
 	
 	/*
@@ -24,7 +39,7 @@ public class RecursionTraversal {
 	 */
 	public static void preOrderTraversal(MyTreeNode root){
 		if(root != null){
-			System.out.println(" "+root.getData());
+			System.out.print(" "+root.getData());
 			preOrderTraversal(root.getLeft());
 			preOrderTraversal(root.getRight());
 		}
@@ -37,7 +52,7 @@ public class RecursionTraversal {
 		if(root != null){
 			postOrderTraversal(root.getLeft());
 			postOrderTraversal(root.getRight());
-			System.out.println(" "+root.getData());
+			System.out.print(" "+root.getData());
 		}
 	}
 }
