@@ -1,12 +1,13 @@
 package java.algos.main;
 
-import java.algos.data.MyTree;
-import java.algos.data.MyTree.MyTreeNode;
+import java.algos.data.MyTreeNode;
+import java.algos.traversal.RecursionTraversal;
 
 public class MainTest {
 
-	public static void main(String[]...args){
+	public static void main(String[] args){
 		MyTreeNode root = new MyTreeNode(7);
+		
 		root.setLeft(new MyTreeNode(3));
 		root.getLeft().setLeft(new MyTreeNode(20));
 		root.getLeft().setRight(new MyTreeNode(21));
@@ -17,6 +18,6 @@ public class MainTest {
 		root.getRight().setRight(new MyTreeNode(10));
 		root.getRight().getRight().setLeft(new MyTreeNode(5));
 
-		MyTree tree = new MyTree(root);
+		RecursionTraversal.inOrderTraversal(root);
 	}
 }
