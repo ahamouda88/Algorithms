@@ -1,4 +1,4 @@
-package java.algos.data;
+package algorithms.tree.data;
 
 public class MyTreeNode {
 	

@@ -1,7 +1,7 @@
-package java.algos.main;
+package algorithms.tree.main;
 
-import java.algos.data.MyTreeNode;
-import java.algos.traversal.RecursionTraversal;
+import algorithms.tree.data.MyTreeNode;
+import algorthims.tree.traversal.RecursionTraversal;
 
 public class MainTest {
 

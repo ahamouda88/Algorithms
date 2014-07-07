@@ -1,6 +1,6 @@
-package java.algos.traversal;
+package algorthims.tree.traversal;
 
-import java.algos.data.MyTreeNode;
+import algorithms.tree.data.MyTreeNode;
 
 /*
  * A static class for printing Tree values
