@@ -1,6 +1,7 @@
 package algorithms.tree.main;
 
 import algorithms.tree.data.MyTreeNode;
+import algorthims.tree.traversal.InOrderIterativeTraversal;
 import algorthims.tree.traversal.RecursionTraversal;
 
 public class MainTest {
@@ -42,5 +43,10 @@ public class MainTest {
 		System.out.println("\n");
 		int x = 3;
 		System.out.println("InOrder Search For: "+ x +" = "+RecursionTraversal.inOrderTraversalFind(root,x));
+		
+		System.out.println("\n");
+		System.out.println("InOrder Traversal Iteratively" +"\n" +"==========================");
+		InOrderIterativeTraversal.printTree(root);
+		
 	}
 }
