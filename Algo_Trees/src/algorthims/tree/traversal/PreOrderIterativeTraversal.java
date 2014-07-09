@@ -4,8 +4,14 @@ import java.util.Stack;
 
 import algorithms.tree.data.MyTreeNode;
 
+/*
+ * Iterative Traversal of tree using PreOrder Algorithm.
+ */
 public class PreOrderIterativeTraversal {
 	
+	/*
+	 * Printing data of the tree.
+	 */
 	public static void printTree(MyTreeNode root){
 		if(root == null) return;
 		Stack<MyTreeNode> stack = new Stack<>();
