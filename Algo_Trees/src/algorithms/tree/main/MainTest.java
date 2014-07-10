@@ -1,9 +1,10 @@
 package algorithms.tree.main;
 
 import algorithms.tree.data.MyTreeNode;
-import algorthims.tree.traversal.InOrderIterativeTraversal;
-import algorthims.tree.traversal.PreOrderIterativeTraversal;
-import algorthims.tree.traversal.RecursionTraversal;
+import algorithms.tree.traversal.InOrderIterativeTraversal;
+import algorithms.tree.traversal.PostOrderIterativeTraversal;
+import algorithms.tree.traversal.PreOrderIterativeTraversal;
+import algorithms.tree.traversal.RecursionTraversal;
 
 public class MainTest {
 
@@ -40,6 +41,10 @@ public class MainTest {
 		System.out.println("\n");
 		System.out.println("PostOrder Traversal!" +"\n" +"====================");
 		RecursionTraversal.postOrderTraversal(root);
+		
+		System.out.println("\n");
+		System.out.println("PostOrder Traversal Iteratively" +"\n" +"=============================");
+		//PostOrderIterativeTraversal.printTree(root);
 		
 		System.out.println("\n");
 		System.out.println("InOrder Traversal!" +"\n" +"===================");

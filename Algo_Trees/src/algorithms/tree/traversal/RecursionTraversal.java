@@ -1,4 +1,4 @@
-package algorthims.tree.traversal;
+package algorithms.tree.traversal;
 
 import algorithms.tree.data.MyTreeNode;
 
