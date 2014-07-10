@@ -44,7 +44,7 @@ public class MainTest {
 		
 		System.out.println("\n");
 		System.out.println("PostOrder Traversal Iteratively" +"\n" +"=============================");
-		//PostOrderIterativeTraversal.printTree(root);
+		PostOrderIterativeTraversal.printTree(root);
 		
 		System.out.println("\n");
 		System.out.println("InOrder Traversal!" +"\n" +"===================");
