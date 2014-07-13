@@ -1,6 +1,7 @@
 package algorithms.tree.main;
 
 import algorithms.tree.data.MyTreeNode;
+import algorithms.tree.funtions.CheckBalance;
 import algorithms.tree.traversal.InOrderIterativeTraversal;
 import algorithms.tree.traversal.PostOrderIterativeTraversal;
 import algorithms.tree.traversal.PreOrderIterativeTraversal;
@@ -57,6 +58,9 @@ public class MainTest {
 		System.out.println("\n");
 		System.out.println("InOrder Traversal Iteratively" +"\n" +"=============================");
 		InOrderIterativeTraversal.printTree(root);
+		
+		System.out.println("\n");
+		System.out.println("Is Tree Balanced?: " + CheckBalance.checkTreeBalance(root));
 		
 	}
 }
