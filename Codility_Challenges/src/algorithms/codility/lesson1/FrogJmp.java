@@ -3,7 +3,7 @@ package algorithms.codility.lesson1;
 public class FrogJmp {
 
 	// Method to count the minimal number of jumps from position X to Y.
-	public int solution(int X, int Y, int D) {
+	public static int solution(int X, int Y, int D) {
 		if (X > Y)
 			return 0;
 
