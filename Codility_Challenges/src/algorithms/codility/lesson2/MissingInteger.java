@@ -10,7 +10,7 @@ public class MissingInteger {
 	 * @param A
 	 * @return
 	 */
-	public int solution(int[] A) {
+	public static int solution(int[] A) {
 		int length = A.length;
 
 		Set<Integer> numbers = new HashSet<>();
