@@ -37,4 +37,44 @@ public class GenomicRangeQuery {
         }
         return result;
     }
+	
+   public static int[] optimal_solution(String S, int[] P, int[] Q) {
+        int[] result = new int[P.length];
+        int[][] factors = new int[S.length()][4];
+        
+        for(int i = 0; i < S.length(); i++){
+             char c = S.charAt(i);
+             if(c == 'A') factors[i][0] = 1;
+				 if(c == 'C') factors[i][1] = 1;
+				 if(c == 'G') factors[i][2] = 1;
+				 if(c == 'T') factors[i][3] = 1;
+        	}
+
+		// Loop to calculate prefixes
+		for(int i = 1; i < S.length() ; i++){
+		    for(int j = 0; j < 4; j++){
+		        factors[i][j] += factors[i-1][j];
+		    }
+		}
+		
+		for(int i = 0; i < S.length() ; i++){
+		    for(int j = 0; j < 4; j++){
+		        System.out.print(factors[i][j]+" ");
+		        }
+		        System.out.println();
+		    }
+		    
+		    for(int i = 0 ; i < P.length ; i++){
+		        for(int j = 0 ; j < 4 ; j++){
+		            int temp = 0;
+		            if(P[i]-1 >= 0) 
+		                temp = factors[P[i]-1][j];
+		            if(factors[Q[i]][j] - temp > 0){
+		                result[i] = j + 1;
+		                break;
+		            }
+		        }    
+		    }
+		    return result;
+		}
 }
