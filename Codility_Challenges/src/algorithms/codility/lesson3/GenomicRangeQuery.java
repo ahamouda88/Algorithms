@@ -45,7 +45,7 @@ public class GenomicRangeQuery {
 	 * @param Q
 	 * @return
 	 */
-   public static int[] optimal_solution(String S, int[] P, int[] Q) {
+	public static int[] optimal_solution(String S, int[] P, int[] Q) {
         int[] result = new int[P.length];
         int[][] factors = new int[S.length()][4];
         
@@ -82,6 +82,6 @@ public class GenomicRangeQuery {
 		            }
 		        }    
 		    }
-		    return result;
-		}
+	    return result;
+	}
 }
