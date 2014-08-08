@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class GenomicRangeQuery {
 	/**
-	 * A Method to find the minimal nucleotide from a range of sequence DNA.
+	 * A Method to find the minimal nucleotide from a range of sequence DNA in time complexity O(N * M).
 	 * @param S
 	 * @param P
 	 * @param Q
@@ -38,6 +38,13 @@ public class GenomicRangeQuery {
         return result;
     }
 	
+	/**
+	 * A Method to find the minimal nucleotide from a range of sequence DNA in time complexity O(N + M).
+	 * @param S
+	 * @param P
+	 * @param Q
+	 * @return
+	 */
    public static int[] optimal_solution(String S, int[] P, int[] Q) {
         int[] result = new int[P.length];
         int[][] factors = new int[S.length()][4];
