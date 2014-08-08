@@ -4,7 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class GenomicRangeQuery {
-	
+	/**
+	 * A Method to find the minimal nucleotide from a range of sequence DNA.
+	 * @param S
+	 * @param P
+	 * @param Q
+	 * @return
+	 */
 	public static int[] solution(String S, int[] P, int[] Q) {
         int[] result = new int[P.length];
         Map<Character, Integer> nucleotides = new HashMap<>();
