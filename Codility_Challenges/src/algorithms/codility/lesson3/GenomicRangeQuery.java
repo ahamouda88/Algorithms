@@ -64,24 +64,17 @@ public class GenomicRangeQuery {
 		    }
 		}
 		
-		for(int i = 0; i < S.length() ; i++){
-		    for(int j = 0; j < 4; j++){
-		        System.out.print(factors[i][j]+" ");
-		        }
-		        System.out.println();
-		    }
-		    
-		    for(int i = 0 ; i < P.length ; i++){
-		        for(int j = 0 ; j < 4 ; j++){
-		            int temp = 0;
-		            if(P[i]-1 >= 0) 
-		                temp = factors[P[i]-1][j];
-		            if(factors[Q[i]][j] - temp > 0){
-		                result[i] = j + 1;
-		                break;
-		            }
-		        }    
-		    }
+	    for(int i = 0 ; i < P.length ; i++){
+	        for(int j = 0 ; j < 4 ; j++){
+	            int temp = 0;
+	            if(P[i]-1 >= 0) 
+	                temp = factors[P[i]-1][j];
+	            if(factors[Q[i]][j] - temp > 0){
+	                result[i] = j + 1;
+	                break;
+	            }
+	        }    
+	    }
 	    return result;
 	}
 }
