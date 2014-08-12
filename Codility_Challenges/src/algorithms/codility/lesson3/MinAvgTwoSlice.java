@@ -7,7 +7,7 @@ public class MinAvgTwoSlice {
 	 * @param A
 	 * @return
 	 */
-	public int solution(int[] A) {
+	public static int solution(int[] A) {
 		int length = A.length;
 		if(length <= 1){
 			return 0;
