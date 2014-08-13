@@ -8,14 +8,13 @@ public class CountDiv {
 	 * @param K
 	 * @return
 	 */
-    public int solution(int A, int B, int K) {
-        long result;
-        if(A % K == 0){
-            result = ((B - A) / K) + 1;
-        } else{
-            long start = A + (A % K);
-            result = ((B - start) / K) + 1;
-        }
-        return (int) result; 
-    }
+	public int solution(int A, int B, int K) {
+		long result = 0;
+		if(A % K == 0){
+			result = ((B - A) / K);
+		} else{
+			result = (B / K - (A / K + 1));
+		}
+		return (int) result + 1;
+	}
 }
