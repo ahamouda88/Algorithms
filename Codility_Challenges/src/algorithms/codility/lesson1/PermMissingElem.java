@@ -1,8 +1,12 @@
 package algorithms.codility.lesson1;
 
 public class PermMissingElem {
-	
-    // Method to find the missing element in an Array.
+
+	/**
+	 * A Method to find the missing element in an Array.
+	 * @param A
+	 * @return
+	 */
     public static int solution(int[] A) {
         if(A.length == 0)
             return 1;
