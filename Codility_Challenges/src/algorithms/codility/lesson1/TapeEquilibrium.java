@@ -2,7 +2,11 @@ package algorithms.codility.lesson1;
 
 public class TapeEquilibrium {
 
-    // Method to calculate minimum difference between two arrays.
+	/**
+	 * A Method to calculate minimum difference between two arrays.
+	 * @param A
+	 * @return
+	 */
     public static int solution(int[] A) {
         if(A.length == 0 || A.length == 1)
             return 0;
