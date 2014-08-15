@@ -75,7 +75,7 @@ public class MainTest {
 
 		  // Add m5 friends
 		  m5.AddFriend(m14);
-		  m5.AddFriend(m14);
+		  m5.AddFriend(m15);
 		  m5.AddFriend(m16);
 
 		  // Add m6 friends
@@ -83,6 +83,7 @@ public class MainTest {
 		  m6.AddFriend(m18);
 		  
 		  SocialMedia.printFriends(m1);
+		  calculateSquence("26");
 		
 	}
 	
@@ -115,4 +116,31 @@ public class MainTest {
 		System.out.println("InOrder Traversal Iteratively" +"\n" +"=============================");
 		InOrderIterativeTraversal.printTree(root);
 	}
+	
+	
+	public static void calculateSquence(String S0){
+	    if(S0 == null || S0.length() <= 0 ){
+	        return;
+	    }
+	    StringBuilder tmp;
+	    String S1 = S0;
+	    for(int i = 0 ; i < 5 ; i++){
+	        int count = 1;
+	        int j = 0;
+	        tmp = new StringBuilder("");
+	        for(j = 0 ; j < S1.length() - 1 ; j++){
+	            if(S1.charAt(j) == S1.charAt(j+1)){
+	                count++;
+	            }else{
+	                tmp.append(count+""+S1.charAt(j));
+	                count = 1;
+	            }
+	        }
+	        
+	        tmp.append(count+""+S1.charAt(j));
+	        S1 = tmp.toString();
+	        System.out.println(tmp.toString());
+	    }
+	}	
+	
 }
