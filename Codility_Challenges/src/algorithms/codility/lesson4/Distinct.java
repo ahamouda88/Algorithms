@@ -10,17 +10,15 @@ public class Distinct {
 	 * @return
 	 */
 	public static int solution(int[] A) {
-
 		// No elements in the Array
 		if (A.length == 0) {
 			return 0;
 		}
 		int counter = 1;
 
-		// Sort the array
 		Arrays.sort(A);
 
-		// Iterate and count the number of distinct values
+		// Loop to count the number of distinct values
 		for (int i = 1; i < A.length; i++) {
 			if (A[i - 1] != A[i]) {
 				counter++;

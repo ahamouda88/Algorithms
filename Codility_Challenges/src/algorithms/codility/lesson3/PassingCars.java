@@ -14,6 +14,8 @@ public class PassingCars {
             
         int east = 0;
         long passingCars = 0;
+        
+        // Loop to count number of passing cars.
         for(int i = 0 ; i < length ; i++){
             if(A[i] == 0)
                 east++;
@@ -21,6 +23,8 @@ public class PassingCars {
                 passingCars += east;
             }
         }
+        
+        // Returning -1 if passing cars is more than 1000 Million
         if(passingCars > 1000000000)
             return -1;
         
