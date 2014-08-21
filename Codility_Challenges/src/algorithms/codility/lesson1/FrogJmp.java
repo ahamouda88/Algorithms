@@ -4,7 +4,7 @@ public class FrogJmp {
 
 	/**
 	 * A Method to count the minimal number of jumps from position X to Y.
-	 * @param X
+	 * @param X 
 	 * @param Y
 	 * @param D
 	 * @return

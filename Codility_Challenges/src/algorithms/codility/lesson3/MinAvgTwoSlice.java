@@ -15,6 +15,8 @@ public class MinAvgTwoSlice {
 		
 		double avg = Double.MAX_VALUE;
 		int start = 0;
+		
+		// Loop to check if two or three consecutive elements are less than the average number
 		for(int i = 0 ; i < length - 2 ; i++){
 		    if((A[i] + A[i + 1]) / 2.0 < avg){
 		        avg = (A[i] + A[i + 1]) / 2.0;
