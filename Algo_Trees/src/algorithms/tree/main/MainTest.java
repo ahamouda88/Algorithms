@@ -58,7 +58,7 @@ public class MainTest {
 		m1.AddFriend(m3);
 		m1.AddFriend(m4);
 		
-		// Add m2 firnds
+		// Add m2 friends
 		m2.AddFriend(m5);
 		m2.AddFriend(m6);
 		m2.AddFriend(m7);
