@@ -6,7 +6,7 @@ public class NumberOfDiscIntersections {
 	
 	/**
 	 * A Method to compute intersections between sequence of discs. 
-	 * Time Complexity: O(n2)
+	 * Time Complexity: O(n2) and Space Complexity: O(1)
 	 * @param A
 	 * @return
 	 */
@@ -30,7 +30,7 @@ public class NumberOfDiscIntersections {
 	
 	/**
 	 * A Method to compute intersections between sequence of discs. 
-	 * Time Complexity: O(n*log(n))
+	 * Time Complexity: O(n*log(n)) and Space Complexity: O(n)
 	 * @param A
 	 * @return
 	 */
