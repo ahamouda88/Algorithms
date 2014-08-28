@@ -20,23 +20,25 @@ public class Brackets {
 			if (ch == '{' || ch == '(' || ch == '[') {
 				stack.push(ch);
 			} else {
-				if(ch == '}' && stack.peek() == '{')
+				if (stack.isEmpty())
+					return 0;
+				if (ch == '}' && stack.peek() == '{')
 					matchFound = true;
-				else if(ch == ']' && stack.peek() == '[')	
+				else if (ch == ']' && stack.peek() == '[')
 					matchFound = true;
-				else if(ch == ')' && stack.peek() == '(')
+				else if (ch == ')' && stack.peek() == '(')
 					matchFound = true;
-				
-				if(matchFound){
+
+				if (matchFound) {
 					stack.pop();
-				}else{
+				} else {
 					return 0;
 				}
 			}
 		}
-		if(!stack.isEmpty())
+		if (!stack.isEmpty())
 			return 0;
-		
+
 		return 1;
 	}
 }
