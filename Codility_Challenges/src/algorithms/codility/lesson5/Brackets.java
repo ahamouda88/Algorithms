@@ -3,6 +3,12 @@ package algorithms.codility.lesson5;
 import java.util.Stack;
 
 public class Brackets {
+	
+	/**
+	 * A Method to determine whether a given string of parentheses is properly nested. 
+	 * @param S
+	 * @return
+	 */
 	public int solution(String S) {
 
 		Stack<Character> stack = new Stack<>();
