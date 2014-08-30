@@ -17,9 +17,6 @@ public class Brackets {
 		if (S.length() % 2 != 0)
 			return 0;
 
-		if (S.isEmpty())
-			return 1;
-
 		for (int i = 0; i < S.length(); i++) {
 			Character ch = S.charAt(i);
 			boolean matchFound = false;
