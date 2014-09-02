@@ -2,7 +2,12 @@ package algorithms.codility.lesson5;
 
 public class Nesting {
 	
-	public int solution(String S) {
+	/**
+	 * A Method to determine whether given string of parentheses is properly nested.
+	 * @param S
+	 * @return
+	 */
+	public static int solution(String S) {
 		if (S.isEmpty())
 			return 1;
 
