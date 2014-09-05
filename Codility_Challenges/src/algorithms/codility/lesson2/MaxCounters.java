@@ -4,8 +4,7 @@ public class MaxCounters {
 	
 	/**
 	 * A Method to calculate the values of counters after applying all alternating operations.
-	 * Increase counter by 1 if element is less than N
-	 * Set value of all counters to current maximum if element greater than N 
+	 * Increase counter by 1 if element is less than N, Set value of all counters to current maximum if element greater than N 
 	 * @param N
 	 * @param A
 	 * @return

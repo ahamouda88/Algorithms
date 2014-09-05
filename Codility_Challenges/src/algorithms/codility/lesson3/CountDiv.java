@@ -1,6 +1,7 @@
 package algorithms.codility.lesson3;
 
 public class CountDiv {
+	
 	/**
 	 * A Method to compute number of integers divisible by K in range [A..B]. 
 	 * @param A
