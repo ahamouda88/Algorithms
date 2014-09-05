@@ -87,6 +87,7 @@ public class MainTest {
 		
 	}
 	
+	@SuppressWarnings("unused")
 	private static void TreeTraversal(MyTreeNode root){
 		
 		System.out.println("PreOrder Traversal!" +"\n" +"===================");

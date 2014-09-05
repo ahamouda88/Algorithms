@@ -15,7 +15,7 @@ public class PermMissingElem {
         long length = A.length + 1;    
         long expectedSum = (length * (length + 1)) / 2; 
        
-        long sum = 0;
+        long sum = 0;        
         // Loop to get sum of elements in the array.
         for(int i = 0; i < A.length ; i++){
             sum += A[i];
