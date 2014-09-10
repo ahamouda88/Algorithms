@@ -4,6 +4,12 @@ import java.util.Stack;
 
 public class Fish {
 
+	/**
+	 * N voracious fish are moving along a river. Calculate how many fish are alive. 
+	 * @param A an array represents the size of each fish
+	 * @param B an array represents the direction of each fish in the river, either 1 or 0
+	 * @return number of survived fishs
+	 */
 	public static int solution(int[] A, int[] B) {
 		int len = A.length;
 		Stack<Long> fishStack = new Stack<>();
