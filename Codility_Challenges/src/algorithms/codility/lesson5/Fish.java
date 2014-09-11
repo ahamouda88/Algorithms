@@ -17,20 +17,17 @@ public class Fish {
 		// To count survived fishes following upstream
 		int countFishes = 0;
 		for (int i = 0; i < len; i++) {
+			// Add fish to stack if it is following downstream, otherwise check it will survive.
 			if(B[i] == 0){
+				while(!fishStack.isEmpty()){
+					if (A[i] > fishStack.peek()) {
+						fishStack.pop();
+					}else{
+						break;
+					}
+				}
 				if(fishStack.isEmpty()){
 					countFishes++;
-				}else{
-					while(!fishStack.isEmpty()){
-						if (A[i] > fishStack.peek()) {
-							fishStack.pop();
-						}else{
-							break;
-						}
-					}
-					if(fishStack.isEmpty()){
-						countFishes++;
-					}
 				}
 			}else{
 				fishStack.push((long) A[i]);
