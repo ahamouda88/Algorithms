@@ -12,7 +12,9 @@ public class Fish {
 	 */
 	public static int solution(int[] A, int[] B) {
 		int len = A.length;
+		// Add only fishes following downstream
 		Stack<Long> fishStack = new Stack<>();
+		// To count survived fishes following upstream
 		int countFishes = 0;
 		for (int i = 0; i < len; i++) {
 			if(B[i] == 0){
@@ -37,9 +39,4 @@ public class Fish {
 		return fishStack.size() + countFishes;
 	}
 
-	public static void main(String[] args) {
-		int[] a = { 4, 3, 2, 1, 5 };
-		int[] b = { 0, 1, 0, 0, 0 };
-		System.out.println(solution(a, b));
-	}
 }
