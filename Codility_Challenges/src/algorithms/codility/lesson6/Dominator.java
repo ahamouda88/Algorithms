@@ -23,7 +23,6 @@ public class Dominator {
             if(count > A.length / 2)
             return i;
         }
-        System.out.print(sum);
         return -1;
 	}
 }
