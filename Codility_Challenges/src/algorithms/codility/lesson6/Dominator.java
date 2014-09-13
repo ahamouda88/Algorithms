@@ -2,27 +2,42 @@ package algorithms.codility.lesson6;
 
 public class Dominator {
 
-	public static int solution(int[] A){		
-		int sum = 0;
-        for(int i=0 ; i < A.length ; i++){
-            sum+=A[i];
+	/**
+	 * A Method to find an index of an array such that its value occurs at more than half of indices in the array. 
+	 * @param A
+	 * @return
+	 */
+	public static int solution(int[] A){       
+		int len = A.length;
+        if(len <= 0){
+            return 0;
         }
-        for(int i=0; i < A.length - 1; i++){
-            if(A[i] != A[i+1]){
-                sum -= (A[i] + A[i+1]);
-                i++;
-            }else{
-                sum -= A[i];
+        int leader = A[0];
+        int counter = 0;
+        /* Find the Leader */
+        for(int i=1 ; i<len ; i++){
+            if(A[i] == leader)
+                counter++;
+            else
+                counter--;
+            
+            if(counter == 0){
+                leader = A[i];
+                counter++;
             }
         }
-        int  count = 0;
-        for(int i=0; i < A.length; i++){
-            if(sum == A[i]){
-                count++;
+        counter = 0;
+        int lastIndex = -1;
+        /* Check that the value of the leader occurs more than half of values in the array */
+        for(int i = 0 ; i<len ; i++){
+            if(A[i] == leader){
+                counter++;
+                lastIndex = i;
             }
-            if(count > A.length / 2)
-            return i;
         }
-        return -1;
+        if(counter <= len/2){
+            return -1;
+        }
+        return lastIndex;
 	}
 }
