@@ -3,9 +3,7 @@ package algorithms.codility.lesson6;
 public class Dominator {
 
 	/**
-	 * A Method to find an index of an array such that its value occurs at more
-	 * than half of indices in the array.
-	 * 
+	 * A Method to find an index of an array such that its value occurs at more than half of indices in the array.
 	 * @param A
 	 * @return
 	 */
@@ -31,8 +29,7 @@ public class Dominator {
 		}
 		
 		/*
-		 * Check that the value of the leader occurs more than half of values in
-		 * the array
+		 * Check that the value of the leader occurs more than half of values in the array
 		 */
 		counter = 0;
 		int lastIndex = -1;
