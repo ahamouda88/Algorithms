@@ -2,6 +2,12 @@ package algorithms.codility.lesson6;
 
 public class EquiLeader {
 
+	/**
+	 * A Method to find the index S such that the leaders of the sequences
+	 * A[0], A[1], ..., A[S] and A[S + 1], A[S + 2], ..., A[N - 1] are the same. 
+	 * @param A
+	 * @return
+	 */
 	public static int solution(int[] A) {
 		int len = A.length;
 		if (len <= 0) {
