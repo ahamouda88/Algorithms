@@ -2,7 +2,12 @@ package algorithms.codility.lesson7;
 
 public class MaxProfit {
 
-	public int solution(int[] A){
+	/**
+	 * A Method to compute the maximum possible earning from a log of stock prices.  
+	 * @param A
+	 * @return
+	 */
+	public static int solution(int[] A){
 		int len = A.length;
 		if(len <= 1){
 			return 0;
