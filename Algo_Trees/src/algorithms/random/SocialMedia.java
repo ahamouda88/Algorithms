@@ -1,4 +1,4 @@
-package algorithms.tree.main;
+package algorithms.random;
 
 import java.util.HashSet;
 import java.util.LinkedList;
