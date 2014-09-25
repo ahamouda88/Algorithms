@@ -2,6 +2,11 @@ package algorithms.codility.lesson7;
 
 public class MaxDoubleSliceSum {
 
+	/**
+	 * A Method to find a maximum sum of a compact subsequence of array elements.
+	 * @param A
+	 * @return
+	 */
 	public int solution(int[] A) {
 		int len = A.length;
 		if (len <= 3) {
