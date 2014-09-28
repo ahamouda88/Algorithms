@@ -7,7 +7,7 @@ public class MaxDoubleSliceSum {
 	 * @param A
 	 * @return
 	 */
-	public int solution(int[] A) {
+	public static int solution(int[] A) {
 		int len = A.length;
 		if (len <= 3) {
 			return 0;
