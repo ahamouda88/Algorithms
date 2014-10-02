@@ -2,6 +2,11 @@ package algorithms.codility.lesson8;
 
 public class MinPerimeterRectangle {
 
+	/**
+	 * A Method to find the minimal perimeter of any rectangle whose area equals N. 
+	 * @param N
+	 * @return
+	 */
 	public static int solution(int N) {
 		int i = 1;
 		int perimeter = 0;
