@@ -33,8 +33,6 @@ public class MainTest {
 		root.getRight().getRight().setLeft(new MyTreeNode(5));
 
 		System.out.println("Is Tree Balanced?: " + CheckBalance.checkTreeBalance(root));
-		
-		
 	}
 	
 	@SuppressWarnings("unused")
@@ -98,4 +96,15 @@ public class MainTest {
 	    }
 	}
 	
+	/*
+	 * Method for dividing numbers without the '/' operator
+	 */
+	public static int divide(int num, int x){
+		if(num - x < 0){
+			return 0;
+		}
+		else{
+			return divide(num - x, x) + 1;
+		}
+	}
 }
