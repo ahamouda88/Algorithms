@@ -2,6 +2,11 @@ package algorithms.codility.lesson8;
 
 public class CountFactors {
 	
+	/**
+	 * A Method to counmt factors of given number n.
+	 * @param N
+	 * @return
+	 */
 	public static int solution(int N){
 		int i = 1;
 
