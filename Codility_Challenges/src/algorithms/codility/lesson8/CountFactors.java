@@ -3,7 +3,7 @@ package algorithms.codility.lesson8;
 public class CountFactors {
 	
 	/**
-	 * A Method to counmt factors of given number n.
+	 * A Method to count factors of given number n.
 	 * @param N
 	 * @return
 	 */
