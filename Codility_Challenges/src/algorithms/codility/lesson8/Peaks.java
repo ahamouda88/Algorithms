@@ -10,11 +10,13 @@ public class Peaks {
 		int length = A.length;
 		List<Integer> peaks = new ArrayList<Integer>();
 
+		// Loop for adding all the peaks to the list.
 		for (int i = 1; i < length - 1; i++) {
 			if (A[i] > A[i - 1] && A[i] > A[i + 1])
 				peaks.add(i);
 		}
 
+		// Loop to get the number of blocks, results from dividing the Array
 		for (int size = 1; size <= length; size++) {
 			if (length % size == 0) {
 				int x = 0;
