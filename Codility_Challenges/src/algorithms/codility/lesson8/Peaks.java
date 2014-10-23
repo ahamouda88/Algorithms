@@ -5,6 +5,12 @@ import java.util.List;
 
 public class Peaks {
 
+	/**
+	 * A Method to Divide an array into the maximum number of same((-))sized blocks, 
+	 * each of which should contain an index P such that A[P - 1] < A[P] > A[P + 1].
+	 * @param A
+	 * @return
+	 */
 	public static int solution(int[] A) {
 
 		int length = A.length;
