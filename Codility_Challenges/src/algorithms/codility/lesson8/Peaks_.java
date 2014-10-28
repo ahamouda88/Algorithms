@@ -3,7 +3,7 @@ package algorithms.codility.lesson8;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Peaks {
+public class Peaks_ {
 
 	/**
 	 * A Method to Divide an array into the maximum number of same((-))sized blocks, 
