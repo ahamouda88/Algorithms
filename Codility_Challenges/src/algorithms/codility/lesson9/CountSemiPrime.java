@@ -26,28 +26,33 @@ class CountSemiPrime {
 		}
 
 		// Get All semi-prime numbers.
-		Set<Integer> set = new HashSet<Integer>();
 		int[] countsemi = new int[N + 1];
-		int count = 0;
-		boolean end = false;
-		for (int i = 2; i < N + 1; i++) {
-			if (sieve[i] == true) {
-				for (int j = i; j * i <= N; j++) {
-					if (sieve[j] == true) {
-						if (i * j <= N) {
-							countsemi[i * j] = 1;
-							set.add(i * j);
-						} else {
-							end = true;
-							break;
-						}
-					}
-				}
-			}
-			if (end) {
-				break;
-			}
-		}
+        for(int i=2 ; i < N + 1; i++){
+            if(sieve[i] == true){
+                for(int j=i ; j * i <= N; j++){
+                    if(sieve[j] == true){
+                        countsemi[i * j] = 1; 
+                    }
+                }
+            }
+        }
+        
+        int count = 0;
+        for(int i=0 ; i < N+1 ; i++){
+        	count += countsemi[i];
+        	countsemi[i] = count;
+        }
+        
+        for(int i=0; i < P.length ; i++){
+        	for(int j = P[i] ; j <= Q[i] ; j++){
+        		count += countsemi[j];
+        	}
+        	result[i] = countsemi[Q[i]] - countsemi[P[i] - 1];
+        }
 		return result;
+	}
+	
+	public static void main(String[] args){
+		CountSemiPrime.solution(26, new int[]{4}, new int[]{10});
 	}
 }
