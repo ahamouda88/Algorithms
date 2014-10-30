@@ -5,7 +5,7 @@ import java.util.*;
 class CountSemiPrime {
 
 	// Still not working, and need some refactor
-	public int[] solution(int N, int[] P, int[] Q) {
+	public static int[] solution(int N, int[] P, int[] Q) {
 		boolean[] sieve = new boolean[N + 1];
 		int[] result = new int[P.length];
 		for (int i = 2; i < sieve.length; i++) {
