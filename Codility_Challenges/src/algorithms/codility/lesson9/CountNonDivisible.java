@@ -32,15 +32,6 @@ public class CountNonDivisible {
 				j++;
 			}
 		}
-		
-		// Count number of divisible for each element in the array.
-//		for (int i = 0; i < n; i++) {
-//			for (int j = 1; j <= Math.ceil(Math.sqrt(A[i])); j++) {
-//				if (map.get(j) != null && A[i] % j == 0) {
-//					counter[i] += map.get(j);
-//				}
-//			}
-//		}
 		return result;
 	}
 
