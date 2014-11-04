@@ -50,5 +50,22 @@ public class CountNonDivisible {
 		CountNonDivisible.solution(input);
 
 	}
+	
+    public int[] solution(int[] A, int[] B) {
+        // write your code in Java SE 8
+        int length = A.length;
+        int[] result = new int[length];
+        
+        int[] fib = new int[length + 2];
+        fib[1] = 1;
+        for(int i=2 ; i< length + 2; i++){
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+
+        for(int i= 0; i < length ; i++){
+            result[i] = fib[A[i] + 1] % (1<<B[i]);
+        }
+        return result;
+    }
 
 }
