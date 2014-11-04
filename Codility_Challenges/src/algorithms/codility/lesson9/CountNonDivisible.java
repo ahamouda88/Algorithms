@@ -42,6 +42,9 @@ public class CountNonDivisible {
 
 	}
 	
+	/*
+	 * For Testing the Fibonacci problem.
+	 */
     public int[] solution(int[] A, int[] B) {
         // write your code in Java SE 8
         int length = A.length;
