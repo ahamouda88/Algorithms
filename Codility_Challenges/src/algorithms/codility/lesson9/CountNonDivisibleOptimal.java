@@ -2,6 +2,12 @@
 
 public class CountNonDivisibleOptimal {
 
+	/**
+	 * A Method to calculate the number of elements of an array 
+	 * that are not divisors of each element. 
+	 * @param A
+	 * @return
+	 */
 	public static int[] solution(int[] A) {
 		int n = A.length;
 		int[] count = new int[2 * n + 1];
