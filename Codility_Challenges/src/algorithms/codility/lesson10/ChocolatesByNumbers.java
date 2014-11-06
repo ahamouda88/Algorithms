@@ -8,14 +8,14 @@ public class ChocolatesByNumbers {
 	 * @param M
 	 * @return
 	 */
-	public int solution(int N, int M) {
+	public static int solution(int N, int M) {
 		long gcd = getGCD(N, M);
 		long lcm = ((long)N * M) / gcd;
 		return (int)(lcm / M);
 	}
 
 	// Using Euclidean algorithm to get the Greatest Common Divisor.
-	private long getGCD(int a, int b) {
+	private static long getGCD(int a, int b) {
 		if (a % b ==0) {
 			return b;
 		} else {
