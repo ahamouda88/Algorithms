@@ -2,6 +2,7 @@ package algorithms.tree.main;
 
 import algorithms.tree.data.MyTreeNode;
 import algorithms.tree.funtions.CheckBalance;
+import algorithms.tree.funtions.SortedArraytoBST;
 import algorithms.tree.traversal.InOrderIterativeTraversal;
 import algorithms.tree.traversal.PostOrderIterativeTraversal;
 import algorithms.tree.traversal.PreOrderIterativeTraversal;
@@ -33,6 +34,10 @@ public class MainTest {
 		root.getRight().getRight().setLeft(new MyTreeNode(5));
 
 		System.out.println("Is Tree Balanced?: " + CheckBalance.checkTreeBalance(root));
+		
+		int[] numbers = new int[]{1,2,3,4,5,6};
+		MyTreeNode node = SortedArraytoBST.sortedArrayToBST(numbers, 1, numbers.length - 1);
+		InOrderIterativeTraversal.printTree(node);
 	}
 	
 	@SuppressWarnings("unused")
@@ -106,5 +111,5 @@ public class MainTest {
 		else{
 			return divide(num - x, x) + 1;
 		}
-	}
+	}	
 }
