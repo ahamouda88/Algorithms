@@ -15,7 +15,7 @@ public class SortedArraytoBST {
 		if(start > end){
 			return null;
 		}
-		int mid = start + (end - start) / 2;
+		int mid = (start + end) / 2;
 		MyTreeNode node = new MyTreeNode(array[mid]);
 		node.setLeft(sortedArrayToBST(array, start, mid - 1));
 		node.setRight(sortedArrayToBST(array, mid + 1, end));
