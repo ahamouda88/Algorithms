@@ -2,6 +2,12 @@ package algorithms.codility.lesson10;
 
 public class CommonPrimeDivisors {
 
+	/**
+	 * A Method to check whether two numbers have the same prime divisors. 
+	 * @param A
+	 * @param B
+	 * @return
+	 */
 	public static int solution(int[] A, int[] B) {
 		int n = A.length;
 		int count = 0;
