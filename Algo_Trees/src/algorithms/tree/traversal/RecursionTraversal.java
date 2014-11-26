@@ -11,7 +11,7 @@ public class RecursionTraversal {
 	/*
 	 * Visit Left Node, Current Node, then Right Node
 	 */
-	public static void inOrderTraversal(MyTreeNode root){
+	public static void inOrderTraversal(MyTreeNode<Integer> root){
 		if(root != null){
 			inOrderTraversal(root.getLeft());
 			System.out.print(" "+root.getData());
@@ -19,7 +19,7 @@ public class RecursionTraversal {
 		}
 	}
 	
-	public static boolean inOrderTraversalFind(MyTreeNode root, Object x){
+	public static boolean inOrderTraversalFind(MyTreeNode<Integer> root, Object x){
 		boolean check = false;
 		if(root != null){
 			check = inOrderTraversalFind(root.getLeft(), x);
@@ -37,7 +37,7 @@ public class RecursionTraversal {
 	/*
 	 * Visit Current Node, Left Node, then Right Node
 	 */
-	public static void preOrderTraversal(MyTreeNode root){
+	public static void preOrderTraversal(MyTreeNode<Integer> root){
 		if(root != null){
 			System.out.print(" "+root.getData());
 			preOrderTraversal(root.getLeft());
@@ -48,7 +48,7 @@ public class RecursionTraversal {
 	/*
 	 * Visit Left Node, Right Node, then Current Node
 	 */
-	public static void postOrderTraversal(MyTreeNode root){
+	public static void postOrderTraversal(MyTreeNode<Integer> root){
 		if(root != null){
 			postOrderTraversal(root.getLeft());
 			postOrderTraversal(root.getRight());

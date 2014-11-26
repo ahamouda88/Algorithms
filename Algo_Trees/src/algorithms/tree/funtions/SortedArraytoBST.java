@@ -11,12 +11,12 @@ public class SortedArraytoBST {
 	 * @param end
 	 * @return
 	 */
-	public static MyTreeNode sortedArrayToBST(int[] array, int start, int end){
+	public static MyTreeNode<Integer> sortedArrayToBST(int[] array, int start, int end){
 		if(start > end){
 			return null;
 		}
 		int mid = (start + end) / 2;
-		MyTreeNode node = new MyTreeNode(array[mid]);
+		MyTreeNode<Integer> node = new MyTreeNode<Integer>(array[mid]);
 		node.setLeft(sortedArrayToBST(array, start, mid - 1));
 		node.setRight(sortedArrayToBST(array, mid + 1, end));
 		return node;

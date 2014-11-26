@@ -4,20 +4,20 @@ import algorithms.tree.data.MyTreeNode;
 
 public class CheckBalance {
 
-	public static boolean checkTreeBalance(MyTreeNode root){
+	public static boolean checkTreeBalance(MyTreeNode<Integer> root){
 		int x = maxBranch(root);
 		int y =  minBranch(root);
 		return (x - y <= 1);
 	}
 	
-	private static int minBranch(MyTreeNode node){
+	private static int minBranch(MyTreeNode<Integer> node){
 		if(node == null){
 			return 0;
 		}
 		return 1 + Math.min(minBranch(node.getLeft()), minBranch(node.getRight()));
 	}
 	
-	private static int maxBranch(MyTreeNode node){
+	private static int maxBranch(MyTreeNode<Integer> node){
 		if(node == null){
 			return 0;
 		}

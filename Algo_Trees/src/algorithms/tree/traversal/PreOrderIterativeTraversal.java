@@ -12,10 +12,10 @@ public class PreOrderIterativeTraversal {
 	/*
 	 * Printing data of the tree.
 	 */
-	public static void printTree(MyTreeNode root){
+	public static void printTree(MyTreeNode<Integer> root){
 		if(root == null) return;
-		Stack<MyTreeNode> stack = new Stack<>();
-		MyTreeNode temp = root;
+		Stack<MyTreeNode<Integer>> stack = new Stack<>();
+		MyTreeNode<Integer> temp = root;
 		stack.add(temp);
 
 		while(!stack.isEmpty()){
