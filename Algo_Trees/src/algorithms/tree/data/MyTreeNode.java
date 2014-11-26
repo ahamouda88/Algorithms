@@ -26,7 +26,7 @@ public class MyTreeNode<T> {
 		this.right = right;
 	}
 
-	public Object getData() {
+	public T getData() {
 		return data;
 	}
 
