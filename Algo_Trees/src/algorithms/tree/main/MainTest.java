@@ -21,27 +21,27 @@ public class MainTest {
 	 *                (7) (8) (5) 
 	 */
 	public static void main(String[] args){
-		MyTreeNode root = new MyTreeNode(4);
+		MyTreeNode<Integer> root = new MyTreeNode<>(4);
 	
-		root.setLeft(new MyTreeNode(3));
-		root.getLeft().setLeft(new MyTreeNode(20));
-		root.getLeft().setRight(new MyTreeNode(21));
-		root.getLeft().getRight().setLeft(new MyTreeNode(7));
-		root.getLeft().getRight().setRight(new MyTreeNode(8));
+		root.setLeft(new MyTreeNode<Integer>(3));
+		root.getLeft().setLeft(new MyTreeNode<Integer>(20));
+		root.getLeft().setRight(new MyTreeNode<Integer>(21));
+		root.getLeft().getRight().setLeft(new MyTreeNode<Integer>(7));
+		root.getLeft().getRight().setRight(new MyTreeNode<Integer>(8));
 
-		root.setRight(new MyTreeNode(1));
-		root.getRight().setRight(new MyTreeNode(10));
-		root.getRight().getRight().setLeft(new MyTreeNode(5));
+		root.setRight(new MyTreeNode<Integer>(1));
+		root.getRight().setRight(new MyTreeNode<Integer>(10));
+		root.getRight().getRight().setLeft(new MyTreeNode<Integer>(5));
 
 		System.out.println("Is Tree Balanced?: " + CheckBalance.checkTreeBalance(root));
 		
 		int[] numbers = new int[]{1,2,3,4,5,6};
-		MyTreeNode node = SortedArraytoBST.sortedArrayToBST(numbers, 1, numbers.length - 1);
+		MyTreeNode<Integer> node = SortedArraytoBST.sortedArrayToBST(numbers, 1, numbers.length - 1);
 		InOrderIterativeTraversal.printTree(node);
 	}
 	
 	@SuppressWarnings("unused")
-	private static void TreeTraversal(MyTreeNode root){
+	private static void TreeTraversal(MyTreeNode<Integer> root){
 		
 		System.out.println("PreOrder Traversal!" +"\n" +"===================");
 		RecursionTraversal.preOrderTraversal(root);
