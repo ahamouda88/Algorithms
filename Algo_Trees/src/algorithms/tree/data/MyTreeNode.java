@@ -1,28 +1,28 @@
 package algorithms.tree.data;
 
-public class MyTreeNode {
+public class MyTreeNode<T> {
 	
-	private MyTreeNode left;
-	private MyTreeNode right;
-	private Object data;
+	private MyTreeNode<T> left;
+	private MyTreeNode<T> right;
+	private T data;
 
-	public MyTreeNode(Object value) {
+	public MyTreeNode(T value) {
 		this.data = value;
 	}
 
-	public MyTreeNode getLeft() {
+	public MyTreeNode<T> getLeft() {
 		return left;
 	}
 
-	public void setLeft(MyTreeNode left) {
+	public void setLeft(MyTreeNode<T> left) {
 		this.left = left;
 	}
 
-	public MyTreeNode getRight() {
+	public MyTreeNode<T> getRight() {
 		return right;
 	}
 
-	public void setRight(MyTreeNode right) {
+	public void setRight(MyTreeNode<T> right) {
 		this.right = right;
 	}
 
@@ -30,7 +30,7 @@ public class MyTreeNode {
 		return data;
 	}
 
-	public void setData(Object data) {
+	public void setData(T data) {
 		this.data = data;
 	}
 }
