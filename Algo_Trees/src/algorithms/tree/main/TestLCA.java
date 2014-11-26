@@ -33,9 +33,35 @@ public class TestLCA {
 		
 		MyTreeNode<Integer> node1 = new MyTreeNode<Integer>(3);
 		MyTreeNode<Integer> node2 = new MyTreeNode<Integer>(1);
-		
+		printTree(root);
 		System.out.println("Lowest Common Ancestor between node "+ node1.getData()+ ", and "+node2.getData() +" is: "+ LowestCommonAncestor.LowestCA(root, node1, node2).getData());
 	}
 	
+	public static void printTree(MyTreeNode<Integer> root){
+		Queue<MyTreeNode<Integer>> queue = new LinkedList<>();
+		int currentLevel = 1;
+		int nextLevel = 0;
+		if(root != null){
+			queue.add(root);
+		}
+		while(!queue.isEmpty()){
+			MyTreeNode<Integer> temp = queue.remove();
+			System.out.print("("+temp.getData()+")");
+			if(temp.getLeft() != null){
+				queue.add(temp.getLeft());
+				nextLevel++;
+			}
+			if(temp.getRight() != null){
+				queue.add(temp.getRight());
+				nextLevel++;
+			}
+			currentLevel--;
+			if(currentLevel == 0){
+				currentLevel = nextLevel;
+				nextLevel = 0;
+				System.out.println();
+			}
+		}
+	}
 
 }
